@@ -1,6 +1,7 @@
 import Script from "next/script";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <Script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-app.js" />
-        <Script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-messaging.js" />
+        <Script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js" />
+        <Script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js" />
       </body>
     </html>
   );

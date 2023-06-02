@@ -26,11 +26,12 @@ const firebaseCloudMessaging = async () => {
     // Get new token from Firebase
     const fcm_token = await getToken(messaging, {
       vapidKey:
-        "BH-SaKPQW00APbBeZEdmgbDlR7MURS42hcVmE2QGeTQHBN_INvG-UL1-ViVnNyQZQnNGIVWsipcyOjLA5fKZgK4",
+        "BPlw6Ad6Ht7KdvpJIGQA3SY5FbykFnxaHbjV0zmbMBXhAL6zb_SmGbeuQhPX8m3-ZjBcVmqdlbqoqt3kxNgDPqQ",
     });
 
     // Set token in our local storage
     if (fcm_token) {
+      console.log(fcm_token)
       localforage.setItem("fcm_token", fcm_token);
       return fcm_token;
     }
